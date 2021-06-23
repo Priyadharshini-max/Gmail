@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Font Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+    </script>
+    <title>Gmail</title>
+</head>
+<body>
+    <p>Gmail API Quickstart</p>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+    <!-- Create container -->
+<div class="container">
+<div class="row">
+    <!-- Create image tag for gmail icon -->
+    <img src="https://i.pinimg.com/originals/ae/47/fa/ae47fa9a8fd263aa364018517020552d.png" alt="gmailImage"
+     height="60px" width="60px">  
+</div>
+<!-- create Column for Compose,Inbox,Sent,Drafts Button -->
+<div>
+<div class="row">
+<div class="col-2">
+<input type="button" value="Compose" onclick="composeMailBtn()" class="btn"><br>
+<input type="button" value="Inbox" onclick="primaryMailBtn()" class="btn"><br>
+<input type="button" value="Sent" onclick="sentBtn()" id="sent" class="btn"><br>
+<input type="button" value="Drafts" onclick="draftMailBtn()" class="btn"><br>
+</div>
+<!-- Create another column for display mails -->
+<div class="col-9" id="displayMail">
+
+</div>
+
+<!-- Create div for popup (display compose mail) -->
+<div id="popupDiv">
+  <div class="spanDiv"> <span>New Message</span>
+<span class="close" onclick="closeFn()">&times;</span><br>
+</div> 
+<input type="gmail" placeholder="To" id="toId">
+<br><hr>
+<input type="text" placeholder="Subject" id="subjectId">
+<br><hr>
+<textarea rows="4" cols="46" id="textareaId"></textarea><br>
+<input type="button" value="Send" id="sendId" onclick="sentMail()">
+</div>
+
+</div>
+</div>
+</div>
+    <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+   </script>
+</body>
+<script src="script.js"></script>
+</html>

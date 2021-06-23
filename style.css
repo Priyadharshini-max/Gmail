@@ -1,0 +1,42 @@
+.row{
+    border: 2px solid black;
+}
+
+#popupDiv{
+    border: 2px solid black ;
+    width: 26%;
+    height: 44%;
+    position: fixed;
+    right: 120px;
+    display: none;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+  width: 170px;
+  height: 80px;
+}
+.spanDiv{
+    color : white;
+    background-color: black;
+}
+
+#subjectId,#toId,#textareaId{
+    border: none;
+    outline: none;
+}
+#sendId{
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+img{
+   margin-left: 70px;
+}
+
+#displayMail{
+    display: none;  
+}
